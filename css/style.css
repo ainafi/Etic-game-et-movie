@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'hillshort';
+    src: url('../font/Hillshort.otf');
+}
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+.btn{
+    border: none;
+}
+/* header */
+.navbar ul li a{
+    position: relative;
+}
+.navbar ul li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    width: 77%;
+    height: 2px;
+    transform-origin: left;
+    background: linear-gradient(355deg, black,red);
+    transition: transform 0.3s ease-out;
+    transform: scale(0);
+}
+.navbar ul li a:hover::after{
+    transform: scale(1);
+}
+.scrollNav{
+    background-color: white;
+    height: 59px;
+    box-shadow: 2px 0px 18px 2px;
+}
+/* landing */
+ .landing{
+    position: relative;
+    background-image: url(../img/kratos1.jpg);
+    background-size: cover;
+    height: 386px;
+    width: 100%;
+    margin-top: -25px;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+.txt{
+    position: absolute;
+    top: 22%;
+    left: 5%;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.visiter{
+    position: absolute;
+    top: 62%;
+    left: 26%;
+}
+.btn-visiter{
+    background: linear-gradient(355deg, black,red);
+    color: white;
+    border: none;
+    width: 101px;
+    height: 39px;
+    font-size: 19px;
+}
+.btn-visiter:hover{
+    background: transparent;
+    transition: 1s;
+    border: 1px white solid;
+}
+/* end landing */
+
+/* service */
+
+.table th{
+    background-color: red; 
+    color: black;
+    padding: 22px; 
+    text-align: center;
+    font-family:'Poppins-Light' !important ;
+}
+
+.table .none{
+   background-color: #000;
+   color: #fff;
+
+}
+
+/* service */
+
+.mg-carousel{
+    width: 92% !important;
+    padding: 20px;
+    /* height: auto !important; */
+}
+
+.hover-carousel:hover{
+    transform: translateY(-15px);
+    transition: .5s ease;
+
+}
+
+
+ @media (max-width:760px) {
+    
+
+    .navbar-brand,.navbar-toggler{
+        z-index: 99;
+    }
+    .navbar-nav{
+        background: linear-gradient(90deg, black,red);
+        top: 2px;
+        left: -100%;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        line-height: 4;
+        height: 800px;
+        transition: .5s;
+        margin-top: -95px;
+        transition: .7s;
+    }
+    .nav-item{
+        margin: 0 auto; 
+        
+    }
+    .nav-link{
+        font-size: 1.5rem;
+        font-family: monospace;
+        z-index: 999;
+    }
+
+    .navbar-nav.show{
+        left: 0;
+        transition: .5s ease-in;
+        padding-left: 0;
+    }
+    .visiter{
+        margin-top: 50px;
+        margin-left: 50px;
+        
+
+    }
+} 
+
+@media (max-width:1080px) {
+    .mg-carousel{
+        height: auto !important;
+    }
+}
+
+
+
